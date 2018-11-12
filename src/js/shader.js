@@ -7,6 +7,14 @@ const controller = () => {
     
 // };
 
+
+const getUserOptions = $div => {
+    chrome.storage.sync.get("opacity", data => {
+        return (data.opacity/100)
+    });
+};
+
+
 const filter = () => {
   const $filterDiv = document.createElement('div');
     
@@ -17,9 +25,11 @@ const filter = () => {
   $filterDiv.style.top = '0';
   $filterDiv.style.position = 'fixed';
   $filterDiv.style.backgroundColor = '#000000';
-  $filterDiv.style.opacity = '0.9';
   $filterDiv.style.zIndex = '1100';
-  //console.log($filterDiv)
+  chrome.storage.sync.get("opacity", data => {
+    $filterDiv.style.opacity = data.opacity/100
+  });
+  console.log($filterDiv)
   return $filterDiv;
 };
 
@@ -28,7 +38,6 @@ const shadeAction = () => {
   const $playerById = document.querySelectorAll('[id*="player"]');
   const $playerByClass = document.querySelectorAll('[class*="player"]');
   const $player = $playerById.length === 0 ? $playerByClass : $playerById;
-  const ecoArr = [{}];
   const indexApply = () => {
         
     for (const el of $player){
