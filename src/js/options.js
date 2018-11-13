@@ -3,8 +3,7 @@ const $range = document.getElementById('clp-range__range');
 const $value = document.getElementById('clp-range__value');
 const $btn = document.getElementById('btn-grey');
 const $saveLog = document.getElementById('save-log');
-
-$value.textContent = $range.value;
+const defaultOpacity = 70;
 
 $range.addEventListener('change', () => {
     $value.textContent = $range.value;
@@ -27,8 +26,13 @@ $btn.addEventListener('click', () => {
 
 const getOptions = () => {
     chrome.storage.sync.get("opacity", data => {
-        $value.textContent = data.opacity;
-        $range.value = data.opacity;
+        if (data.opacity === undefined) {
+            $value.textContent = defaultOpacity;
+            $range.value = defaultOpacity;
+        } else {
+            $value.textContent = data.opacity;
+            $range.value = data.opacity;
+        };
     });
 };
 
