@@ -1,5 +1,5 @@
 # Clipsey
-Browser extension, created to make you video experiance better
+Browser extension, created to make you video experience better
 
 **Teacher:** 
 - https://github.com/serhii-yakymuk
