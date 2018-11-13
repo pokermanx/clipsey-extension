@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="styles/options-style.css">
+    <title>Clipsey options</title>
+</head>
+<body>
+    <header>
+        <div class="clp-header">
+            <h1 class="text text--title">
+                Clipsey Extension
+            </h1>
+        </div>
+    </header>
+    <main>
+        <div class="clp-main">
+            <div class="main-options">
+                <div class="options-el">
+                    <h1 class="text">
+                        Background opacity:
+                    </h1>
+                    <div class="clp-range" id="clp-range">
+                        <input type="range" min="0" max="100" value="70" class="clp-range__range" id="clp-range__range">
+                        <span class="clp-range__value" id="clp-range__value">0</span>
+                    </div>
+                </div>
+                <div class="save-box">
+                    <div class="save">
+                        <button id= "btn-grey" class="btn-grey text">Save</button>
+                    </div>
+                    <div class="text text--hidden" id="save-log">
+                        Saved!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/options.js"></script>
+</body>
+</html>

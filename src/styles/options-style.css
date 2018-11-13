@@ -1,0 +1,128 @@
+header {
+  width: 100%;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.clp-header {
+  margin: auto;
+  display: block;
+  width: 50%;
+}
+
+.text {
+  font-family: 'Titillium Web', sans-serif;
+  width: 100%;
+}
+
+.text--title {
+  text-align: center;
+}
+
+.text--hidden {
+  display: none;
+  margin-left: 30px;
+}
+
+.main-options {
+  width: 70%;
+  display: block;
+  margin: auto;
+  background-color: #ebede6;
+  height: 400px;
+  border: solid 5px #cfd1c6;
+  border-radius: 10px;
+}
+
+.options-el {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clp-range {
+  width: 100%;
+}
+
+.clp-range__range {
+  border-radius: 5px;
+  width: calc(100% - (73px));
+  height: 10px;
+  background: #d7dcdf;
+  background: #000000;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clp-range__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2c3e50;
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+
+.clp-range__range::-webkit-slider-thumb:hover {
+  background: #1abc9c;
+}
+
+.clp-range__range:active::-webkit-slider-thumb {
+  background: #1abc9c;
+}
+
+.clp-range__value {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #2c3e50;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+
+.clp-range__value:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: '';
+}
+
+.btn-grey {
+  width: 30%;
+  border-radius: 5px;
+  padding: 1px 15px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+  -webkit-box-shadow: 0px 2px 0px 0px #caccc7;
+          box-shadow: 0px 2px 0px 0px #caccc7;
+  background-color: #cfd1c6;
+  outline: none;
+}
+
+.btn-grey:hover {
+  background-color: #a2a3a1;
+}
+/*# sourceMappingURL=options-style.css.map */

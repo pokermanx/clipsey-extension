@@ -2,14 +2,33 @@
     "manifest_version": 2,
     "name": "Clipsey",
     "version": "0.1",
+    "options_page": "src/options.html",
+    "browser_action": {
+        "default_icon": "src/icons/light-bulb-on48.png",  
+        "default_title": "Clipsey"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "<all_urls>",
+        "contextMenus"
+    ],
+
+    "background" :  {
+        "scripts" : ["src/js/background.js"],
+        "persistent": false 
+    },
+
     "content_scripts": [
         {
             "matches": [
                 "<all_urls>"
             ],
             "js": [
-                "src/content.js"
-            ]
+                "src/js/shader.js"
+            ],
+            "css" : ["src/styles/shader.css"],
+            "run_at": "document_end"
         }
     ]
 }
