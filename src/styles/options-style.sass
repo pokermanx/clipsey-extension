@@ -2,10 +2,10 @@ header
     width: 100%
 
 *
-  &,
-  &:before,
-  &:after
-    box-sizing: border-box
+    &,
+    &:before,
+    &:after
+        box-sizing: border-box
 
 $shade-10: #2c3e50 !default
 $shade-1: #d7dcdf !default
@@ -56,12 +56,12 @@ $range-label-width: 60px !default
     align-items: center
 
 .clp-range
-    width: $range-width;
+    width: $range-width
     
     &__range
         border-radius: 5px
         width: calc(100% - (#{$range-label-width + 13px}))
-        height: $range-track-height;
+        height: $range-track-height
         background: $range-track-color
         background: #000000
         outline: none
@@ -69,7 +69,7 @@ $range-label-width: 60px !default
         margin: 0
 
         &::-webkit-slider-thumb 
-            appearance: none;
+            appearance: none
             width: $range-handle-size
             height: $range-handle-size
             border-radius: 50%
@@ -84,27 +84,27 @@ $range-label-width: 60px !default
             background: $range-handle-color-hover
 
 .clp-range__value 
-  display: inline-block
-  position: relative
-  width: $range-label-width
-  color: $shade-0
-  line-height: 20px
-  text-align: center
-  border-radius: 3px
-  background: $range-label-color
-  padding: 5px 10px
-  margin-left: 8px
+    display: inline-block
+    position: relative
+    width: $range-label-width
+    color: $shade-0
+    line-height: 20px
+    text-align: center
+    border-radius: 3px
+    background: $range-label-color
+    padding: 5px 10px
+    margin-left: 8px
 
-  &:after 
-    position: absolute
-    top: 8px
-    left: -7px
-    width: 0
-    height: 0
-    border-top: 7px solid transparent
-    border-right: 7px solid $range-label-color
-    border-bottom: 7px solid transparent
-    content: ''
+    &:after 
+        position: absolute
+        top: 8px
+        left: -7px
+        width: 0
+        height: 0
+        border-top: 7px solid transparent
+        border-right: 7px solid $range-label-color
+        border-bottom: 7px solid transparent
+        content: ''
 
 
 .btn-grey
@@ -121,5 +121,5 @@ $range-label-width: 60px !default
     outline: none
 
     &:hover
-        background-color: #a2a3a1;
+        background-color: #a2a3a1
  
