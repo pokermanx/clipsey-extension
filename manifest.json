@@ -27,6 +27,7 @@
             "js": [
                 "src/js/shader.js"
             ],
+            "css" : ["src/styles/shader.css"],
             "run_at": "document_end"
         }
     ]

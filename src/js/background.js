@@ -18,3 +18,4 @@ const changeIcon = (message, sender) => {
 
 chrome.browserAction.onClicked.addListener(popupClicked);
 chrome.runtime.onMessage.addListener(changeIcon);
+
