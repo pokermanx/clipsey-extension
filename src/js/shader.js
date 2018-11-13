@@ -28,7 +28,8 @@ const filter = () => {
     $filterDiv.className = "shader-block"
     $filterDiv.style.animationName = 'appear'
     chrome.storage.sync.get("opacity", data => {
-        $filterDiv.style.opacity = data.opacity/100
+        const opacity = data.opacity === undefined ? 0.7 : data.opacity/100
+        $filterDiv.style.opacity = opacity
     });
     return $filterDiv;
 };
