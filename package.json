@@ -1,0 +1,26 @@
+{
+  "name": "Clipsey",
+  "version": "0.2.0",
+  "description": "Chrome extension",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pokermanx/clipsey-extension-Chrome"
+  },
+  "author": "pokermanx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pokermanx/clipsey-extension-Chrome/issues"
+  },
+  "homepage": "https://github.com/pokermanx/clipsey-extension-Chrome/#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "travis": "^0.1.1"
+  }
+}

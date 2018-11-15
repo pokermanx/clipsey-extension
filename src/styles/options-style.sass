@@ -24,17 +24,26 @@ $range-track-height: 10px !default
 $range-label-color: $shade-10 !default
 $range-label-width: 60px !default
 
+.logo
+    width: 20%
+    height: 60px
+
 .clp-header
     margin: auto
-    display: block
+    display: flex
+    align-items: center
+    justify-content: center
     width: 50%
 
 .text
     font-family: 'Titillium Web', sans-serif
-    width: 100%
+    width: 50%
 
     &--title
+        font-family: 'Dancing Script', cursive;
         text-align: center
+        width: auto
+        font-size: 40px
 
     &--hidden
         display: none
@@ -46,7 +55,7 @@ $range-label-width: 60px !default
     display: block
     margin: auto
     background-color: #ebede6
-    height: 400px
+    height: 220px
     border: solid 5px #cfd1c6
     border-radius: 10px 
 
@@ -63,7 +72,6 @@ $range-label-width: 60px !default
         width: calc(100% - (#{$range-label-width + 13px}))
         height: $range-track-height
         background: $range-track-color
-        background: #000000
         outline: none
         padding: 0
         margin: 0

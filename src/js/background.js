@@ -5,12 +5,16 @@ const popupClicked = tab => {
 const changeIcon = (message, sender) => {
     if (message) {
       chrome.browserAction.setIcon({
-          path: 'src/icons/light-bulb-off48.png',
-          tabId: sender.tab.id
+          path: {
+            "48": 'src/icons/light-bulb-off48.png',
+        }, 
+        tabId: sender.tab.id
     });
   } else {
       chrome.browserAction.setIcon({
-          path: 'src/icons/light-bulb-on48.png',
+          path: {
+              "48": 'src/icons/light-bulb-on48.png',
+          }, 
           tabId: sender.tab.id
     });
   }
