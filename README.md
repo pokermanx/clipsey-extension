@@ -22,7 +22,7 @@ This project uses jasmine standalone 2.5.2. To run tests you have to `git clone`
 - [Serhii Yakymuk](https://github.com/serhii-yakymuk)
 
 **Eleks FrontCamp FB**
-[Facebook](https://www.facebook.com/groups/270300106928894)
+- [Facebook](https://www.facebook.com/groups/270300106928894)
   
 **Wireframe:** 
 - [Mock](https://wireframepro.mockflow.com/view/M2d7a48a66dbfe6d16073fdfa8fdc87e91539289372703)
