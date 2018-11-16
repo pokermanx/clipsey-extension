@@ -6,12 +6,12 @@ const getShaderBlock = () => {
 };
 
 const controller = () => {
-  $shaderBlock = getShaderBlock();
-  $shaderBlock ? shadeBack($shaderBlock) : shadeAction();
+    const $shaderBlock = getShaderBlock();
+    $shaderBlock ? shadeBack() : shadeAction();
 };
 
-const autoCloseListener = async () => {
-    const $shaderBlock = await getShaderBlock()
+const autoCloseListener = () => {
+    const $shaderBlock = getShaderBlock()
     $shaderBlock.addEventListener('click', event => {
         if (event.target.id === 'shader-block') {
             controller()
@@ -34,13 +34,17 @@ const filter = () => {
     return $filterDiv;
 };
 
-const shadeAction = () => {
-    const $body = document.body;
+const getPlayer = () => {
     const $playerById = document.querySelectorAll('[id*="player"]');
     const $playerByClass = document.querySelectorAll('[class*="player"]');
-    const $player = $playerById.length === 0 ? $playerByClass : $playerById;
+    return $player = $playerById.length === 0 ? $playerByClass : $playerById;
+};
+
+const shadeAction = () => {
+    const $body = document.body;
+    const $player = getPlayer();
+
     const indexApply = () => {
-        
         for (const el of $player){
         el.style.zIndex = '1101';
       //el.style.position = 'relative'
@@ -54,7 +58,8 @@ const shadeAction = () => {
     chrome.runtime.sendMessage(true);
 };
 
-const shadeBack = $shaderBlock => {
+const shadeBack = () => {
+    const $shaderBlock = getShaderBlock()
     const $body = document.body;
     $shaderBlock.style.animationName = 'disappear'
     setTimeout(() => {
